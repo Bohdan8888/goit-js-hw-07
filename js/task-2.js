@@ -1,4 +1,14 @@
+
+
+
+ 
+
+
+
+
+
 const images = [
+ 
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
@@ -27,3 +37,20 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+const gallery = document.querySelector('.gallery');
+
+images.forEach(image => {
+ 
+  const listItem = document.createElement('li');
+  listItem.classList.add('gallery-item');
+  const imageElement = document.createElement('img');
+
+
+  imageElement.src = image.url;
+  imageElement.alt = image.alt;
+
+ 
+  listItem.appendChild(imageElement);
+  gallery.appendChild(listItem);
+});
+

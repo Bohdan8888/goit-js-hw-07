@@ -12,3 +12,20 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+.gallery{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+
+padding: inherit;
+ 
+}
+#boxes {
+  display: flex;
+}
+.box {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
