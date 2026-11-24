@@ -25,9 +25,9 @@ const images = [
   },
 ];
 
-const imageJs = document.querySelector(".gallery");
+const gallery = document.querySelector(".gallery");
 
-images.forEach((image) => {
+const items = images.map((image) => {
   const item = document.createElement("li");
   const img = document.createElement("img");
 
@@ -37,5 +37,7 @@ images.forEach((image) => {
   img.height = 300;
 
   item.append(img);
-  imageJs.append(item);
+  return item;
 });
+
+gallery.append(...items);
